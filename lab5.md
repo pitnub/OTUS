@@ -82,6 +82,15 @@ logout
 Password: 
 [utime@shield vagrant]$ 
 
+[vagrant@shield ~]$ python2.7 -c 'import crypt; print(crypt.crypt("test", crypt.mksalt(crypt.METHOD_SHA512)))'
+$6$ybvraOJ7dkDXHpNs$QBs1ELFhF866H/2kP3JazL5FEs1a34LgnBf7iK2chsqIG5qoDAWPCBu6UrjU.pKyaZDTtWQheIhn0BoyUEpWX0
+[vagrant@shield ~]$ sudo vipw -s
+You have modified /etc/shadow.
+You may need to modify /etc/passwd for consistency.
+Please use the command 'vipw' to do so.
+[vagrant@shield ~]$ su utime
+Password: 
+[utime@shield vagrant]$ 
 </pre>
 
 
