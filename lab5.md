@@ -71,7 +71,19 @@ logout
 [vagrant@shield ~]$ su otus
 Password: 
 [otus@shield vagrant]$
+
+[root@shield ~]# chpasswd -c SHA512
+utime:utime4
+[root@shield ~]# grep utime /etc/shadow
+utime:$6$3kCGMLzVXS/7Oa$weNC6cWxWv9/8TDcGPb2ity0oXb1W4xmDEcGS6A4CyxIhjhzPtGWl1vV4P2hlb4G5NdRH3NDV08haAZFr2omJ.:18152:0:99999:7:::
+[root@shield ~]# exit
+logout
+[vagrant@shield ~]$ su utime
+Password: 
+[utime@shield vagrant]$ 
+
 </pre>
+
 
 ####4. Заблокируйте учетную запись пользователя otus с помощью утилиты usermod. Проверьте наличие признаков блокировки в файле /etc/shadow до и после осуществления блокировки. Каковы различия между операцией блокировки пользовательской учетной записи и операцией деактивации пароля пользовательской учетной записи, которые мы только что осуществляли с помощью команд usermod -L и passwd -d?
 
